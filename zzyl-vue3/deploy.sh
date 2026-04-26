@@ -26,4 +26,6 @@ fi
 echo "启动容器 $container_name"
 if [ $container_name = "ruoyi-admin" ]; then
     docker run -d --restart=always --name $container_name -p 9901:80  $image_name:$image_tag
+elif [ $container_name = "zzyl-vue3" ]; then
+    docker run -d --restart=always --name $container_name -p 80:80 $image_name:$image_tag
 fi

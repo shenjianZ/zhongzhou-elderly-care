@@ -28,7 +28,7 @@ pipeline {
                 echo "当前打镜像tag:${DOCKER_TAG}"
                 script {
                     sh "pwd"
-                    sh "docker build -t zzyl-vue:${DOCKER_TAG} -f ./Dockerfile ."
+                    sh "docker build -t zzyl-vue3:${DOCKER_TAG} -f ./Dockerfile ."
                 }
             }
         }
@@ -37,8 +37,8 @@ pipeline {
                 script {
                     sh "pwd"
                     sh "cd `pwd`"
-                    echo "部署升级:zzyl-vue前端服务"
-                    sh "chmod +x ./deploy.sh && sh ./deploy.sh zzyl-vue ${DOCKER_TAG}"
+                    echo "部署升级:zzyl-vue3前端服务"
+                    sh "chmod +x ./deploy.sh && sh ./deploy.sh zzyl-vue3 ${DOCKER_TAG}"
                 }
             }
         }

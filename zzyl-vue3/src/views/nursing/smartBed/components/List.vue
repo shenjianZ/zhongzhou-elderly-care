@@ -356,7 +356,7 @@ const timestampToTime = (timestamp) => {
           position: absolute;
           right: 12px;
           top: 12px;
-          background-image: url('../../../../../assets/icon-sz@2x.png');
+          background-image: url('../../../../assets/icons/icon-sz@2x.png');
           background-size: cover;
           background-repeat: no-repeat;
           background-position: center;

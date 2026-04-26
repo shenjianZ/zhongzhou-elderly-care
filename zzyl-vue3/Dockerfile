@@ -1,13 +1,18 @@
-FROM node:18.20.2 as build
-COPY . /app
-WORKDIR /app
-ARG PUBLIC_PATH=/
-ARG MODE
-RUN npm -v
-RUN npm install  && npm run build:prod
-RUN ls -la /app/dist/
+FROM node:18-alpine AS build
 
-FROM nginx:alpine
-ARG PUBLIC_PATH=/
-COPY --from=build /app/dist/ /usr/share/nginx/html/
+WORKDIR /app
+
+RUN corepack enable && corepack prepare pnpm@8.15.9 --activate
+
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm install --frozen-lockfile
+
+COPY . .
+RUN pnpm build:prod
+
+FROM registry.cn-hangzhou.aliyuncs.com/pull-image/nginx:mainline-alpine
+
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /app/dist /usr/share/nginx/html
+
 EXPOSE 80

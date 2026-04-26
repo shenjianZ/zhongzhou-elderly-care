@@ -49,9 +49,9 @@ services:
       - ${APP_LOG_DIR}:/home/ruoyi/logs
       - ${APP_PROFILE_DIR}:${APP_PROFILE_DIR}
 
-  zzyl-ui:
-    image: ${ZZYL_UI_IMAGE}
-    container_name: zzyl-ui
+  zzyl-vue3:
+    image: ${ZZYL_VUE3_IMAGE}
+    container_name: zzyl-vue3
     restart: unless-stopped
     depends_on:
       - zzyl-admin

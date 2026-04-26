@@ -1337,13 +1337,13 @@ INSERT INTO `sys_menu` VALUES (2003, '护理项目新增', 2001, 2, '#', '', NUL
 INSERT INTO `sys_menu` VALUES (2004, '护理项目修改', 2001, 3, '#', '', NULL, '', 1, 0, 'F', '0', '0', 'nursing:project:edit', '#', 'admin', '2024-08-14 03:00:15', '', NULL, '');
 INSERT INTO `sys_menu` VALUES (2005, '护理项目删除', 2001, 4, '#', '', NULL, '', 1, 0, 'F', '0', '0', 'nursing:project:remove', '#', 'admin', '2024-08-14 03:00:15', '', NULL, '');
 INSERT INTO `sys_menu` VALUES (2006, '护理项目导出', 2001, 5, '#', '', NULL, '', 1, 0, 'F', '0', '0', 'nursing:project:export', '#', 'admin', '2024-08-14 03:00:15', '', NULL, '');
-INSERT INTO `sys_menu` VALUES (2007, '护理等级', 2000, 3, 'level', 'nursing/level/index', NULL, '', 1, 0, 'C', '0', '0', 'nursing:level:list', 'guide', 'admin', '2024-08-14 08:29:05', 'admin', '2025-01-01 14:22:41', '护理等级菜单');
+INSERT INTO `sys_menu` VALUES (2007, '护理等级', 2000, 3, 'level', 'nursing/nursingLevel/index', NULL, '', 1, 0, 'C', '0', '0', 'nursing:level:list', 'guide', 'admin', '2024-08-14 08:29:05', 'admin', '2025-01-01 14:22:41', '护理等级菜单');
 INSERT INTO `sys_menu` VALUES (2008, '护理等级查询', 2007, 1, '#', '', NULL, '', 1, 0, 'F', '0', '0', 'nursing:level:query', '#', 'admin', '2024-08-14 08:29:05', 'admin', '2024-10-03 10:47:20', '');
 INSERT INTO `sys_menu` VALUES (2009, '护理等级新增', 2007, 2, '#', '', NULL, '', 1, 0, 'F', '0', '0', 'nursing:level:add', '#', 'admin', '2024-08-14 08:29:05', 'admin', '2024-10-03 10:47:27', '');
 INSERT INTO `sys_menu` VALUES (2010, '护理等级修改', 2007, 3, '#', '', NULL, '', 1, 0, 'F', '0', '0', 'nursing:level:edit', '#', 'admin', '2024-08-14 08:29:05', 'admin', '2024-10-03 10:47:32', '');
 INSERT INTO `sys_menu` VALUES (2011, '护理等级删除', 2007, 4, '#', '', NULL, '', 1, 0, 'F', '0', '0', 'nursing:level:remove', '#', 'admin', '2024-08-14 08:29:05', 'admin', '2024-10-03 10:47:37', '');
 INSERT INTO `sys_menu` VALUES (2012, '护理等级导出', 2007, 5, '#', '', NULL, '', 1, 0, 'F', '0', '0', 'nursing:level:export', '#', 'admin', '2024-08-14 08:29:05', 'admin', '2024-10-03 10:47:42', '');
-INSERT INTO `sys_menu` VALUES (2013, '护理计划', 2000, 2, 'plan', 'nursing/plan/index', NULL, '', 1, 0, 'C', '0', '0', 'nursing:plan:list', 'druid', 'admin', '2024-08-14 08:29:10', 'admin', '2025-01-01 14:22:45', '护理计划菜单');
+INSERT INTO `sys_menu` VALUES (2013, '护理计划', 2000, 2, 'plan', 'nursing/nursingPlan/index', NULL, '', 1, 0, 'C', '0', '0', 'nursing:plan:list', 'druid', 'admin', '2024-08-14 08:29:10', 'admin', '2025-01-01 14:22:45', '护理计划菜单');
 INSERT INTO `sys_menu` VALUES (2014, '护理计划查询', 2013, 1, '#', '', NULL, '', 1, 0, 'F', '0', '0', 'nursing:plan:query', '#', 'admin', '2024-08-14 08:29:10', '', NULL, '');
 INSERT INTO `sys_menu` VALUES (2015, '护理计划新增', 2013, 2, '#', '', NULL, '', 1, 0, 'F', '0', '0', 'nursing:plan:add', '#', 'admin', '2024-08-14 08:29:10', '', NULL, '');
 INSERT INTO `sys_menu` VALUES (2016, '护理计划修改', 2013, 3, '#', '', NULL, '', 1, 0, 'F', '0', '0', 'nursing:plan:edit', '#', 'admin', '2024-08-14 08:29:10', '', NULL, '');

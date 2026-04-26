@@ -20,6 +20,9 @@ dependencies:
   clipboard:
     specifier: ^2.0.11
     version: 2.0.11
+  dayjs:
+    specifier: 1.11.10
+    version: 1.11.10
   echarts:
     specifier: 5.4.3
     version: 5.4.3
@@ -41,6 +44,9 @@ dependencies:
   jsencrypt:
     specifier: 3.3.2
     version: 3.3.2
+  lodash:
+    specifier: 4.17.21
+    version: 4.17.21
   nprogress:
     specifier: 0.2.0
     version: 0.2.0
