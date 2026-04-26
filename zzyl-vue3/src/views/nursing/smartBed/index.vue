@@ -27,7 +27,7 @@ import useUserStore from '@/store/modules/user'
 import { listAllDeviceFloor,getRoomBedDeviceList } from '@/api/nursing/floor'
 // 组件
 // tab切换
-import SwitchBar from '@/components/switchBar/SwitchBartop.vue'
+import SwitchBar from '@/components/switchBar/switchBartop.vue'
 
 // 房型列表
 import HouseList from './components/List.vue'
