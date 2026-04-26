@@ -1,0 +1,24 @@
+services:
+  zzyl-admin:
+    image: ${ZZYL_ADMIN_IMAGE}
+    container_name: zzyl-admin
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      TZ: ${TZ}
+      SPRING_PROFILES_ACTIVE: prod
+    ports:
+      - "${APP_PORT}:9000"
+    volumes:
+      - ${APP_LOG_DIR}:/home/ruoyi/logs
+      - ${APP_PROFILE_DIR}:${APP_PROFILE_DIR}
+
+  zzyl-ui:
+    image: ${ZZYL_UI_IMAGE}
+    container_name: zzyl-ui
+    restart: unless-stopped
+    depends_on:
+      - zzyl-admin
+    ports:
+      - "${UI_PORT}:80"

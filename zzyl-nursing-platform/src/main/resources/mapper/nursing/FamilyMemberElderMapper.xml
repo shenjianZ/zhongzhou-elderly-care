@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zzyl.nursing.mapper.FamilyMemberElderMapper">
+
+    <insert id="insert">
+        INSERT INTO zzyl.family_member_elder(family_member_id, elder_id, remark, create_time)
+        VALUES (#{familyMemberId}, #{elderId}, #{remark}, #{createTime})
+    </insert>
+
+    <select id="getMyElder" resultType="com.zzyl.nursing.dto.ElderDto">
+        select *
+        from zzyl.family_member_elder
+        where family_member_id = #{id}
+    </select>
+
+    <select id="getMyElderPage" resultType="com.zzyl.nursing.dto.ElderDto">
+        select *
+        from zzyl.family_member_elder
+        where family_member_id = #{userId}
+        limit #{startNum}, #{pageSize}
+    </select>
+</mapper>

@@ -1,0 +1,87 @@
+package com.zzyl.nursing.service;
+
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.zzyl.nursing.domain.Floor;
+import com.zzyl.nursing.vo.FloorVo;
+import com.zzyl.nursing.vo.TreeVo;
+
+import java.util.List;
+
+/**
+ * 楼层Service接口
+ *
+ * @author ruoyi
+ * @date 2024-04-26
+ */
+public interface IFloorService extends IService<Floor>
+{
+    /**
+     * 查询楼层
+     *
+     * @param id 楼层主键
+     * @return 楼层
+     */
+    public Floor selectFloorById(Long id);
+
+    /**
+     * 新增楼层
+     *
+     * @param floor 楼层
+     * @return 结果
+     */
+    public int insertFloor(Floor floor);
+
+    /**
+     * 修改楼层
+     *
+     * @param floor 楼层
+     * @return 结果
+     */
+    public int updateFloor(Floor floor);
+
+    /**
+     * 批量删除楼层
+     *
+     * @param ids 需要删除的楼层主键集合
+     * @return 结果
+     */
+    public int deleteFloorByIds(Long[] ids);
+
+    /**
+     * 删除楼层信息
+     *
+     * @param id 楼层主键
+     * @return 结果
+     */
+    public int deleteFloorById(Long id);
+
+    /**
+     * 查询所有楼层（负责老人）
+     * @return
+     */
+    List<Floor> selectAllByNur();
+
+    /**
+     * 获取所有楼层所有房间中的空床位
+     * 
+     * @return: 
+     * @param: 
+     */
+	List<TreeVo> getRoomAndBedByBedStatus(Integer status);
+
+  /**
+   * 获取所有装有智能设备的楼层
+   *
+   * @return:
+   * @param:
+   */
+	List<FloorVo> getAllFloorsWithDevice();
+
+  /**
+   * 获取所有楼层
+   * 
+   * @return: 
+   * @param: 
+   */
+    List<TreeVo> getRoomAndBed();
+}

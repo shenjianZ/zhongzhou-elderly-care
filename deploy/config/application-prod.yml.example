@@ -1,0 +1,55 @@
+ruoyi:
+  profile: /data/zzyl/uploadPath
+
+spring:
+  datasource:
+    druid:
+      master:
+        url: jdbc:mysql://zzyl-mysql:3306/zzyl?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=Asia/Shanghai
+        username: zzyl
+        password: change_me_mysql_app
+      statViewServlet:
+        login-username: ruoyi
+        login-password: change_me_druid
+  redis:
+    host: zzyl-redis
+    port: 6379
+    database: 2
+    password: change_me_redis
+
+token:
+  secret: change_me_token_secret
+  expireTime: 3600
+
+aliyun:
+  oss:
+    domain: oss-cn-hangzhou.aliyuncs.com
+    endpoint: https://oss-cn-hangzhou.aliyuncs.com
+    bucket-name: change-me-bucket
+    region: cn-hangzhou
+    accessKeyId: change_me_oss_key
+    secretAccessKey: change_me_oss_secret
+
+dept:
+  nursingId: 201
+
+baidu:
+  accessKey: change_me_baidu_key
+  secretKey: change_me_baidu_secret
+  qianfanModel: ERNIE-4.0-8K
+
+wechat:
+  mini-program:
+    appId: change_me_wechat_appid
+    secret: change_me_wechat_secret
+
+huaweicloud:
+  ak: change_me_huawei_ak
+  sk: change_me_huawei_sk
+  regionId: cn-east-3
+  endpoint: change_me_huawei_endpoint
+  projectId: change_me_huawei_project_id
+  host: change_me_huawei_amqp_host
+  accessKey: change_me_huawei_amqp_access_key
+  accessCode: change_me_huawei_amqp_access_code
+  queueName: DefaultQueue
